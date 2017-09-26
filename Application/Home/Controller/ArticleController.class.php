@@ -91,6 +91,7 @@ class ArticleController extends HomeController {
 	private function category($id = 0){
 		/* 标识正确性检测 */
 		$id = $id ? $id : I('get.category', 0);
+        echo $id;
 		if(empty($id)){
 			$this->error('没有指定文档分类！');
 		}

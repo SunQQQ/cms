@@ -1,0 +1,32 @@
+<extend name="Base/common"/>
+
+<block name="body">
+	<div class="sidebar inner">
+		<div class="sb_box fr" style="width: 100%">
+			<h3 class="sb_boxTitle pr">
+				<span style="color:#CE2027">中复新闻</span>
+				<div class="position" style="color:#CE2027">当前位置：<a href="index.htm" tppabs="https://www.metinfo.cn/demo/met101/361/" title="网站首页">网站首页</a> &gt; <a href="index-2.htm" tppabs="https://www.metinfo.cn/demo/met101/361/articals/" >早教学堂</a></div>
+			</h3>
+			<div class="clear"></div>
+
+			<div class="active" id="newslist">
+				<ul class='list-none metlist'>
+					<volist name="list" id="data">
+						<li class='list top'>
+							<span>{$data.create_time|date='Y-m-d H:i:s',###}</span><a href="{:U('Article/detail?id='.$data['id'])}" title='' target='_self'>{$data.title}</a>
+							<p>{$data.description}</p>
+						</li>
+					</volist>
+				</ul>
+				<div id="flip"><div class='digg4 metpager_8'><span class='disabled disabledfy'><b>«</b></span><span class='disabled disabledfy'>‹</span><span class='current'>1</span> <a href="articals_60_2.html" tppabs="https://www.metinfo.cn/demo/met101/361/articals/articals_60_2.html">2</a> <span class='disabled disabledfy'>›</span><a class='disabledfy' href="articals_60_2.html" tppabs="https://www.metinfo.cn/demo/met101/361/articals/articals_60_2.html"><b>»</b></a></div></div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</block>
+
+
+
+
+
+

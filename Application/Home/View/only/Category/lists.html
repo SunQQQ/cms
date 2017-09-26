@@ -1,0 +1,23 @@
+<volist>
+	<eq name="current" value="$cate['id']">
+		<dl class="list-none navnow">
+			<dt id='part2_61'>
+				<a href="{:U('Article/lists?category='.$cate['name'])}" title='中复新闻' class="zm">
+					<span>{$cate.title}</span>
+				</a>
+			</dt>
+		</dl>
+		<else/>
+		<dl class="list-none navnow">
+			<dt id='part2_62'>
+				<a href="{:U('Article/lists?category='.$cate['name'])}" title='中复新闻' class="zm">
+					<span>{$cate.title}</span>
+				</a>
+			</dt>
+		</dl>
+	</eq>
+</volist>
+
+
+
+

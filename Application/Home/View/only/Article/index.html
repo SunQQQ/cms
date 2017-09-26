@@ -1,0 +1,59 @@
+<extend name="Base/common"/>
+
+<block name="body">
+    <div class="sidebar inner">
+        <!--<div class="sb_nav fl">-->
+            <!--<h3 class='sbNavTitle' style="color:#CE2027">新闻中心</h3>-->
+            <!--&lt;!&ndash;<div class="sbNavList" id="sidebar" data-csnow="60" data-class3="0" data-jsok="2">&ndash;&gt;-->
+                <!--&lt;!&ndash;<dl class="list-none navnow">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<dt id='part2_61'>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<a href="articals_61_1.html" title='中复新闻' class="zm"><span>中复新闻</span></a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dl class="list-none navnow">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<dt id='part2_62'>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<a href="articals_62_1.html" title='高复新闻' class="zm"><span>高复新闻</span></a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="clear">&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<div class="sbNavList" id="sidebar" data-csnow="60" data-class3="0" data-jsok="2">&ndash;&gt;-->
+                <!--&lt;!&ndash;{:W('Category/lists', array($category['id'], ACTION_NAME == 'index'))}&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="clear">&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+            <!--<div class="contactImgBg pr"><span style="color:#CE2027">联系我们</span></div>-->
+
+
+            <!--<div class="sbNavBox editor"><p>-->
+                <!--好宝贝托儿所联系方式信息<br />-->
+                <!--电&nbsp; 话：0731-6666 8888&nbsp; 66669999<br />-->
+                <!--联系人：乔老师　　李老师<br />-->
+                <!--传&nbsp; 真：0731-6666 8888<br />-->
+                <!--地&nbsp; 址：建国西路000号（国际会展中心斜对面）</p>-->
+                <!--<div class="clear"></div></div>-->
+        <!--</div>-->
+        <div class="sb_box fr" style="width: 100%">
+            <h3 class="sb_boxTitle pr">
+                <span style="color:#CE2027">早教学堂</span>
+                <div class="position" style="color:#CE2027">当前位置：<a href="index.htm" tppabs="https://www.metinfo.cn/demo/met101/361/" title="网站首页">网站首页</a> &gt; <a href="index-2.htm" tppabs="https://www.metinfo.cn/demo/met101/361/articals/" >早教学堂</a></div>
+            </h3>
+            <div class="clear"></div>
+
+            <div class="active" id="newslist">
+                <ul class='list-none metlist'>
+                    <article:list name="list" category="$category['id']" child="true">
+                        <li class='list top'>
+                            <span>{$list.create_time|date='Y-m-d H:i',###}</span><a href="{:U('Article/detail?id='.$list['id'])}" title='' target='_self'>{$list.title}</a>
+                            <p>{$list.description}</p>
+                        </li>
+                    </article:list>
+                </ul>
+                <div id="flip"><div class='digg4 metpager_8'><span class='disabled disabledfy'><b>«</b></span><span class='disabled disabledfy'>‹</span><span class='current'>1</span> <a href="articals_60_2.html" tppabs="https://www.metinfo.cn/demo/met101/361/articals/articals_60_2.html">2</a> <span class='disabled disabledfy'>›</span><a class='disabledfy' href="articals_60_2.html" tppabs="https://www.metinfo.cn/demo/met101/361/articals/articals_60_2.html"><b>»</b></a></div></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</block>

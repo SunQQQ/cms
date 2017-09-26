@@ -1,0 +1,130 @@
+.comment-box {
+	width: 100%;
+	padding-top: 20px;
+}
+#comment-author-info p {
+	border-radius: 3px;
+	border: #ccc 1px solid;
+	width: 336px;
+	margin-right: 10px;
+}
+#comment-author-info label {
+	width: 62px;
+	height: 26px;
+	line-height: 19px;
+	padding: 4px;
+	text-align: center;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	border-right: #ccc 1px solid;
+	display: inline-block;
+	margin: 0px;
+}
+#comment-author-info input {
+	width: 252px;
+	height: 26px;
+	line-height: 26px;
+	padding: 4px;
+	border: 0;
+	margin-bottom:0;
+}
+.post-area {
+	float: left;
+	width: 100%;
+	border-radius: 2px;
+	border: #ccc 1px solid;
+	margin-bottom: 10px;
+	background: #fff;
+	position: relative;
+}
+#smileys {
+	display: none;
+	position: absolute;
+	left: 48px;
+	top: 0;
+}
+.comment-editor a {
+	color: #777;
+	display: inline-block;
+	padding: 0 8px;
+	height: 32px;
+	line-height: 32px;
+	border-right: 1px dotted #ddd;
+	text-decoration: none;
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+.comment-box .but {
+	width: 100%;
+	padding-top: 10px;
+	float: left;
+}
+
+.comment-list{
+	width:100%;
+	padding-top:38px;
+}
+.main-tit02{
+	float:left;
+	height:40px;
+	line-height:24px;
+	padding-bottom:10px;
+	width:100%;
+	background:url(../images/h3-line.jpg) repeat-x bottom;
+	border-bottom:solid 1px #eaeaea;
+}
+.btn-comment{
+	float:right;
+	padding-left:22px;
+	font-size:14px;
+	background:url(../images/16.jpg) no-repeat 0px 4px;
+	color:#626262;
+}
+.main-tit02 h3{float:left;
+padding:0 20px 9px 10px;
+margin:0px;
+height:40px;
+border-bottom:solid 2px #2a2c2e;
+font-size:24px;
+}
+.color_red{
+	color:#ea6060;
+}
+.comment-list { width:100%; margin-top:30px; }
+.comment-list .main-tit02 h3 span { color:#ea6060; }
+.comment-list ul { padding:1px 0px 0; }
+.comment-list ol { padding:1px 0px 0; }
+.comment-list .btn-comment { float:right; padding-left:22px; font-size:14px; background:url(../images/comment-bg.png) no-repeat 0px 4px; color:#626262; }
+.comment-list .btn-comment:hover { color:#1a98e0; background:url(../images/comment-bg.png) no-repeat 0px -29px; }
+.comment-list .explain { color:#838383; }
+.comment-list ul li{ overflow:hidden; }
+.comment-list ul li span{ float:left; padding-right:6px; }
+.comment-list .photo { float:left; padding-right:10px; }
+.comment-list .photo img{ border-radius:50%; width:40px; height:40px; }
+.comment-list .tit { float:left; width:93%; }
+.comment-list .name a{ color:#1da55b; }
+.comment-list .icon-f img{ margin:0px; padding:4px 0 0 0; }
+.comment-list .rank { float:left; color:#1da55b; }
+.comment-list .time { float:left; color:#c1c1c1; }
+.comment-list .time input { border: 0 none; height: 20px; }
+.comment-list .children .time input { background:#f4f4f4; }
+.comment-list .floor { float:right; color:#1da55b; }
+.comment-list .txt { float:left; width:93%; color:#838383; }
+.comment-list .txt img { max-width:400px; }
+.comment-list .txt p  { margin-bottom:0; padding-top:1px; color:#5b5b5b; }
+.comment-list .reply{ float:right; }
+.comment-list .reply a{ color:#069aef; }
+.comment-list .but { float:left; width:100%; }
+.comment-list .vote { float:right; color:#32B16C; padding-right:4px; }
+.comment-list .vote  span{ float:none; padding-right:0; }
+.comment-list .vote a{ float:left; padding:0 6px 0 14px; background:url(../images/light.png) no-repeat 0 1px; color:#666; }
+.comment-list .vote a:hover{ color:#ed4747; background:url(../images/light.png) no-repeat 0 -26px; }
+.comment-list .vote-count { float:right; padding-left:6px; color:#32b16c; }
+.children { float:right; width:782px; padding:10px; margin:6px 4px; }
+.children .children { margin:0px; padding-top:10px; border:0; }
+.comment-list .depth-1 { padding:14px 0px 10px 10px; border-bottom:1px solid #f0f0f0; }
+.comment-list .depth-2 { border-bottom:1px dotted #dbdbdb; padding:15px 0px 15px 12px; line-height:20px; background:#f6f6f6; }
+.comment-list .depth-3 { border-top:1px dotted #dbdbdb; padding:15px 0px 0px 12px; line-height:20px; background:#f6f6f6; }
+.comment-list a{text-decoration:none;}
+
+

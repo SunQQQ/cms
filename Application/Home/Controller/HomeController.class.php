@@ -26,7 +26,7 @@ class HomeController extends Controller {
         /* 读取站点配置 */
         $config = api('Config/lists');
         C($config); //添加配置
-        C('default_theme','onlyMid');//设置主题
+        C('default_theme','only');//设置主题
 
         if(!C('WEB_SITE_CLOSE')){
             $this->error('站点已经关闭，请稍后访问~');

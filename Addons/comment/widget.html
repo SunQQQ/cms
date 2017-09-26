@@ -1,0 +1,140 @@
+<!-- Comment begin -->
+<link href="__ROOT__/Addons/Comment/Resource/css/style.css" rel="stylesheet" type="text/css">
+<div id="respond" class="comment-box">
+  <div id="comment-author-info">
+    <eq name="addons_config['logined']" value="0">
+      <div class="login-input">
+        <p>
+          <label for="username">用户名</label>
+          <input id="username" name="username" value="{:get_username()}" size="25" tabindex="1" aria-required="true" placeholder="请输入用户名" />
+        </p>
+      </div>
+      <div class="login-input">
+        <p>
+          <label for="password">密码</label>
+          <input id="password" name="password" type="password" value="" size="25" tabindex="1" aria-required="true" placeholder="请输入密码" />
+        </p>
+      </div>
+    </eq>
+    <eq name="addons_config['checkimg']" value="1">
+      <div class="login-input">
+        <p>
+          <label for="validimg">验证码</label>
+          <input id="validimg" name="validimg" value="" size="25" tabindex="1" aria-required="true" placeholder="请输入验证码" />          
+        </p>
+      </div>
+      <div class="login-input">
+        <p>
+          <label for="validimg1">验证码</label>
+          <img id="validimg1" name="validimg1" class="verifyimg reloadverify" alt="点击切换" src="{:addons_url('Comment://Comment/verify')}" style="height:38px;"> </p>
+      </div>
+    </eq>
+  </div>
+  
+  <input id="aid" name="aid" type="hidden" value="{$info[id]}" />
+  <input id="cid" name="cid" type="hidden" value="{$info[category_id]}" />
+  <input id="checkimg" name ="checkimg" type="hidden" value="{$addons_config['checkimg']}" />
+  <input id="cmtcounter" name="cmtcounter" type="hidden" value="{$listdb|count}" />
+          
+  <div style="clear:both; content:; display:block;"></div>
+  <div id="tpcmscomment" class="post-area">
+    <div class="comment-editor"> <a id="comment-smiley" href="javascript:;">表情</a> </div>
+    <div id="smileys"> <a title="" href=""><img src="" /></a> <a title="" href=""><img src="" /></a> <a title="" href=""><img src="" /></a> </div>
+    <textarea name="comment" id="comment" cols="100%" rows="7" style="overflow:hidden; border:0; width:100%; margin:0; padding:0"></textarea>
+  </div>
+  <div class="subcon but">
+    <input class="btn btn-success" type="submit" id="submit" value="提交评论(Ctr+Enter)" />
+  </div>
+  <!--评论列表BEGIN-->
+  <div class="comment-list">
+    <div class="main-tit02"> <a rel="nofollow" class="btnbnt-default btn-comment" href="#respond">发表评论</a>
+      <h3>已有<span class="color_red" id="counter">{$listdb|count}</span>条评论</h3>
+    </div>
+    <ul id="commentlist">
+      <volist name="listdb" id="com">
+        <li class="depth-1">
+          <div>
+            <div class="photo"> <a href="#"> <img src="ddd.jpg" onerror="this.src='__ROOT__/Addons/Comment/Resource/images/face.jpg'"></a> </div>
+            <div class="tit"> <span class="name"> <a href="#" target="_blank">{$com[username]}</a> </span> <span class="icon-f"> </span> <span class="rank">(1级)</span> <span class="explain"></span> <span class="time">&nbsp;2014-12-29</span> <span class="time"> </span> <span class="useragent_output_custom"></span> <span class="useragent_output_custom"></span> <span class="reply"> 
+              <!-- 正常情况 --> 
+              </span> <span class="floor">{$key+1}楼</span> </div>
+            <div class="txt">
+              <p class="useragent_output_custom"></p>
+              <p>{$com[content]}</p>
+              <div class="vote"><span></span><a class="ilike_icon" id="vote4-59840" href="javascript:;">亮了</a>(<span >1</span>)</div>
+            </div>
+          </div>
+        </li>
+      </volist>
+    </ul>
+  </div>
+  <!--评论列表END--> 
+</div>
+<script type="text/javascript" src="__ROOT__/Addons/Comment/Resource/js/render.js"></script> 
+<script type="text/javascript">
+$(document).ready(function() {
+	//刷新验证码
+	var verifyimg = $(".verifyimg").attr("src");
+    $(".reloadverify").click(function(){
+    if( verifyimg.indexOf('?')>0){
+		$(".verifyimg").attr("src", verifyimg+'&random='+Math.random());
+		}else{
+			$(".verifyimg").attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());
+	}});
+	
+	$("#submit").click(function(){
+		var comment = $("#comment").val();
+		if($.trim(comment) =="")
+		{
+			alert("评论内容不能为空！");
+			return;
+		}
+		var username = $("#username").val();
+		var password = $("#password").val();
+		var validimg = $("#validimg").val();
+		var comment = $("#comment").val();
+		var checkimg = $("#checkimg").val();
+		var aid = $("#aid").val();
+		var cid = $("#cid").val();
+		var counter = parseInt($('#cmtcounter').val());
+		$.ajax({
+			type:'post',
+			url:"{:addons_url('Comment://Comment/subcomment')}",
+			data:{
+				'username':username,
+				'password':password,
+				'verify':validimg,
+				'aid':aid,
+				'cid':cid,
+				'comment':comment,
+				'checkimg':checkimg,
+				},
+			success: function(data)
+			{
+				if(data.status){
+					counter = counter + 1;
+					$('#cmtcounter').val(counter);
+					var str = '<li class="depth-1"><div><div class="photo"><a href="#"><img src="ddd.jpg" onerror="'+"this.src='__ROOT__/Addons/Comment/Resource/images/face.jpg'"
++'"></a></div><div class="tit"><span class="name"> <a href="#" target="_blank">'+username+'</a></span><span class="icon-f"></span><span class="rank">(1级)</span><span class="explain"></span><span class="time">&nbsp;'+data.update_time+'</span><span class="time"> </span><span class="useragent_output_custom"></span><span class="useragent_output_custom"></span><span class="reply"></span><span class="floor">'+counter+'楼</span>	</div><div class="txt"><p class="useragent_output_custom"></p><p>'+comment+'</p><div class="vote"><span></span><a class="ilike_icon"  href="javascript:;">亮了</a>(<span >1</span>)</div></div></div></li>';
+					$("#commentlist").append(str);
+					$("#comment").val('');
+					$("#validimg").val('');
+					$("#counter").text(counter);
+					alert("评论发表成功！");
+					$(".reloadverify").click();
+				}else
+				{
+					alert(data.message);
+					$(".reloadverify").click();
+				}
+			},
+			error:function(XMLHttpRequest, textStatus, errorThrown)
+			{
+				$(".reloadverify").click();
+			}			
+		})
+		
+	});
+});
+</script> 
+<!-- Comment end -->

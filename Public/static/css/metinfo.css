@@ -1,0 +1,134 @@
+@charset "utf-8";
+html,body{font:12px/1.8 'Microsoft YaHei',Tahoma,Verdana,'Simsun'; color:#000; background:#F6F6F6; -webkit-text-size-adjust:none;}
+a{color:#000; text-decoration:none;}
+a:hover{color:#000; text-decoration:underline;}
+.fl{float:left;}
+.fr{float:right;}
+.pr{position:relative;}
+/*头部*/
+.inner{width:943px; margin:0 auto; position:relative;}
+header#page_header .metHeaderBg{background-color:#fff; background-repeat:repeat-x; background-position:center bottom;}
+header#page_header .metHeader{overflow:hidden;}
+header#page_header .logo{font-size:0;}
+header#page_header .metLang{position:absolute; top:10px; right:2px;}
+header#page_header .metLang a{color:#555; font-family:'Simsun';}
+header#page_header .langSpan{margin:0 10px; color:#b4b4b4;}
+header#page_header .metInfo1{position:absolute; bottom:5px; right:6px; color:#fa4c07; font-size:18px; font-weight:bold; padding-left:60px; background:url("met_img.png")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/met_img.png*/ no-repeat -878px -190px;}
+/*导航*/
+nav#page_nav{height:41px; line-height:41px; position:relative; z-index:1000;}
+nav#page_nav .line{width:3px; height:41px; overflow:hidden;}
+nav#page_nav .metNav li{float:left; text-align:center; position:relative;}
+nav#page_nav .metNav li>a{display:block; height:41px; overflow:hidden;}
+nav#page_nav .metNav li a{color:#fff; display:block; font-size:15px; _height:41px; _overflow:hidden;}
+nav#page_nav .metNav li a:hover{text-decoration:none; }
+nav#page_nav .metNav .hover{background:url("nav_hover.png")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/nav_hover.png*/ no-repeat center bottom;}
+nav#page_nav .metNav li dl{display:none; position:absolute; left:0px; z-index:100;}
+nav#page_nav .metNav li dl dd{white-space: nowrap; height:30px; line-height:30px;}
+nav#page_nav .metNav li dl dd a{font-weight:normal !important; padding:0 10px; font-size:14px; display:block; height:30px; line-height:30px;}
+nav#page_nav .metNav li dl dd a:hover{font-size:15px;}
+header#page_header .FlashKj1{overflow:hidden;}
+header#page_header .FlashKj2{overflow:hidden;}
+header#page_header .metFlash{ overflow:hidden;}
+header#page_header .flash{font-size:0;}
+header#page_header .FlashYY{background:url("../pic/met_img.png")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/met_img.png*/ no-repeat center top; height:20px; font-size:0px; overflow:hidden;}
+/*内容*/
+@-moz-document url-prefix(){section#posts{margin-top:-20px; padding:0px;}}
+section#posts .indexImg{width:100%; height:35px; overflow:hidden; font-size:0; display:block;}
+section#posts h3.titleh3{width:100%; border-bottom:1px dotted #ccc; height:30px; line-height:30px; overflow:hidden; font-size:14px;}
+section#posts h3.titleh3 span{display:block; padding:0 10px;}
+section#posts .indexMore{height:11px; width:41px; overflow:hidden; font-size:0; background:url("met_img.png")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/met_img.png*/ no-repeat -707px -235px; position:absolute; top:9px; right:10px;}
+section#posts .index1zuo{margin-bottom:15px;}
+section#posts .index1zhong{margin-bottom:15px;}
+section#posts .index1you{border:1px solid #DDDDDD; margin-bottom:15px; overflow:hidden;}
+section#posts .index1zuoBox,.index1zhongBox{padding:0px 10px 0px 10px; overflow:hidden;}
+section#posts .index1zuoBox ol{padding-top:5px;}
+section#posts .index1zuoBox li{height:30px; line-height:30px; overflow:hidden; border-bottom: 1px dotted #CCCCCC; background:url("met_img.png")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/met_img.png*/ no-repeat -931px -212px; padding-left:15px;}
+section#posts .index1zuoBox li span{float:right; margin-left:10px; color:#666}
+/*首页案例*/
+section#posts .rslides{width:100%;position:relative;list-style:none;padding:0;overflow:hidden;}
+section#posts .rslides_nav{height:60px; width:18px; position:absolute;-webkit-tap-highlight-color:rgba(0,0,0,0);top:50%;left:0px;opacity:0.5;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=50)";text-indent:-9999px;overflow:hidden;text-decoration:none;background:url("A_anli.png")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/A_anli.png*/ no-repeat 0 0px; margin-top:-30px;}
+*html .rslides{margin:0px; padding:0px; top:0px;}
+*+html .rslides{margin:0px; padding:0px; top:0px;}
+section#posts .rslides_nav:active{opacity:1.0}
+section#posts .rslides_nav.next{left:auto;background-position:-18px 0px; right:0px;}
+section#posts .rslides_tabs{height:7px; margin:0px auto;text-align:center;zoom:1; display:none;}
+*html .rslides_tabs{ margin-left:80px; margin-top:7px;}
+*+html .rslides_tabs{ margin-left:80px;margin-top:7px;}
+section#posts .rslides_tabs li{ height:7px; line-height:7px;float:none;_float:left;*float:left;display:inline-block;margin-right:5px;}
+section#posts .rslides_tabs a{text-indent:-9999px;overflow:hidden;background:#DDD;display:inline-block;_display:block;*display:block;width:7px;height:7px}
+section#posts .rslides_tabs .rslides_here a{background:#04AEF4;}
+section#posts .focus{margin:5px auto; font-size:0px; position:relative;}
+/*结束*/
+section#posts .index2{margin-bottom:20px;}
+section#posts .index2Title{height:38px; background:url("A_Index2.jpg")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/A_Index2.jpg*/ no-repeat left top;}
+section#posts .index2 h3{width:100%; background:url("../pic/met_img.png")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/met_img.png*/ no-repeat right -87px; height:38px; line-height:34px; overflow:hidden; font-size:14px;}
+section#posts .index2 h3 span{margin:0 10px 0 15px;}
+section#posts .index2 .indexMore{top:12px; right:15px;}
+section#posts .index2Box{background:url("A_index2Box.jpg")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/A_index2Box.jpg*/ repeat-y; overflow:hidden; padding:10px 35px;}
+#indexcar ol{ position:absolute; width: 2012em; }
+#indexcar ol li{ float:left; text-align:center; }
+#indexcar ol li a.img{ display:block; text-align:center; font-size:0px;}
+#indexcar ol li a.img img{ margin:auto; border:1px solid #d6d6d6;}
+#indexcar ol li h3{display:none; font-weight:normal; margin-top:5px; height:20px; line-height:20px; overflow:hidden;}
+section#posts .index2Box .next,.index2Box .prev{font-size:16px; font-weight:bold; width:18px; height:60px; line-height:60px; overflow:hidden; display:block; float:left; background:url("A_jiantou.jpg")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/A_jiantou.jpg*/ no-repeat;}
+section#posts .index2Box .next{background-position:-18px 0px; position:absolute; left:915px; top:45px;}
+section#posts .index2Box .prev{background-position:0px 0px; position:absolute; left:10px; top:45px;}
+section#posts .index2Box .next:hover{text-decoration:none;}
+section#posts .index2Box .prev:hover{text-decoration:none;}
+section#posts .index2Box .next span{position:absolute; left:5px;}
+section#posts .index2Box .prev span{position:absolute; right:5px;}
+*html section#posts .index2Box .next{position:absolute; left:880px; top:45px;}
+*html section#posts .index2Box .prev{position:absolute; left:-25px; top:45px;}
+section#posts .index2Box .profld{margin:0px; position:relative; overflow:hidden;}
+#trigger{display:none; float:left; margin-right:5px; margin-top:0px; position:relative; bottom:8px; *bottom:0px; *top:5px; zoom:1;}
+#trigger a{ background:url("neu.gif")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/neu.gif*/ no-repeat -78px -10px; width:8px; height:8px; font-size:0px; display:inline-block; overflow:hidden; margin-right:5px;}
+#trigger a.current{ background-position:-78px 0px;}
+section#posts .index2Bot{height:8px; background:url("../pic/met_img.png")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/met_img.png*/ no-repeat left -126px; font-size:0; overflow:hidden;}
+section#posts .index3{z-index:10;}
+section#posts .index3zuo{margin-bottom:20px;}
+section#posts .index3zhong{margin-bottom:20px;}
+section#posts .index3you{margin-bottom:20px;}
+section#posts .indexImg04{width:100%; overflow:hidden; font-size:0; display:block;}
+section#posts .index3 .index3youBox{padding:10px 10px 0 10px;}
+section#posts .index3Img{width:100%; height:58px; overflow:hidden; font-size:0; display:block;}
+footer#page_footer .indexFooter{}
+footer#page_footer .footLeft{width:28%; overflow:hidden; margin:15px 0 10px;}
+footer#page_footer .footLogo{padding-right:20px;}
+footer#page_footer .footRight{width:100%; overflow:hidden; margin:15px 0 10px;text-align: center}
+footer#page_footer .foot-nav{padding-bottom:5px;}
+footer#page_footer .foot-nav a{color:#666; font-weight:bold;}
+footer#page_footer .foot-nav span{color:#999; margin:0 10px;}
+footer#page_footer .powered_by_metinfo{height:20px; line-height:20px;}
+footer#page_footer .foot-text{color:#666;}
+footer#page_footer .foot-text a{color:#333;}
+footer#page_footer .hyperlink{width:100%;}
+footer#page_footer .hyperlink h3{height:25px; float:left; line-height:25px; font-size:13px; color:#666; margin-right:5px;}
+footer#page_footer .footText{text-align:left;}
+footer#page_footer ul li{float:left; margin:0 7px; line-height:25px;}
+footer#page_footer ul li a{color:#666;}
+footer#page_footer .TUimg ul li{float:left; margin:5px 0 5px 15px; font-size:0px;}
+/*内页*/
+.sidebar .active{font-family:"宋体";}
+.sb_nav{width:25%;}
+.sbNavTitle{background:url("../pic/met_img.png")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/met_img.png*/ no-repeat left -140px; height:45px; line-height:45px; font-size:14px; padding-left:25px; overflow:hidden;}
+.sbNavList{background:url("../pic/met_img.png")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/met_img.png*/ no-repeat left -188px; padding:5px 18px 10px 14px; white-space:nowrap; overflow:hidden; margin-bottom:10px;}
+.sbNavList dt a{display:block; background:url("../pic/met_img.png")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/met_img.png*/ no-repeat -499px -188px; height:29px; line-height:30px; margin:5px 0; padding-left:40px; _width:163px; overflow:hidden;}
+.sbNavList dt a:hover{background:url("../pic/met_img.png")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/met_img.png*/ no-repeat -499px -222px; text-decoration:none; font-weight:bold;}
+.sbNavList dd{padding:0 10px 10px 10px; overflow:hidden;}
+.sbNavList dd h4{height:25px; line-height:25px; font-weight:normal; background:url("met_img.png")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/met_img.png*/ no-repeat -916px -235px; border-bottom:1px dashed #C1C1C1; padding-left:30px; _width:150px; overflow:hidden;}
+/*联系方式*/
+.contactImg{overflow:hidden; width:247px; height:63px;}
+.contactImgBg{background:url("../pic/met_img.png")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/met_img.png*/ no-repeat -247px -188px; width:247px; height:63px; overflow:hidden;}
+.contactImgBg span{font-size:14px; font-weight:bold; position:absolute; left:15px; top:35px;}
+.sb2NavTitle{background:url("A_sb_lianxi.jpg")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/A_sb_lianxi.jpg*/ no-repeat center bottom; height:40px; line-height:40px; font-size:14px; color:#000; padding-left:25px; overflow:hidden;}
+.sbNavBox{padding:5px 18px 40px 21px;}
+/*右侧*/
+.sb_box{width:73%;}
+.sb_boxTitle{height:45px; line-height:45px; display:block; background: url("../pic/met_img.png")/*tpa=https://www.metinfo.cn/demo/met101/361/templates/met101/images/met_img.png*/ no-repeat -247px -140px; font-size:14px; color:#CE2027; white-space:nowrap; overflow:hidden; padding-left:50px;}
+.sb_boxTitle span{width:32%; overflow:hidden; display:block;}
+.position{width:60%; overflow:hidden; font-weight:normal; font-size:12px; text-align:right; position:absolute; right:0px; top:0px;}
+.sb_box .active{padding:15px 20px 20px 20px !important;}
+/*控制内页搜索*/
+.searchnavlist select{overflow:hidden; width:180px; white-space:nowrap;}
+.searchnavlist input{width:170px;}
+
